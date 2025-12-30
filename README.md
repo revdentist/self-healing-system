@@ -1,4 +1,4 @@
-# 🛠️ Self-Healing Incident Detection System
+🛠️ Self-Healing Incident Detection System
 
 > Because staring at logs at 3 AM builds character, not systems.
 
@@ -50,11 +50,15 @@ Together, they prevent silent failure.
 
 - **Log Ingestion** – Accepts structured logs
 - **Incident Detector** – Identifies anomalies and failures
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/20b8be2b-5198-4e79-856b-536ef966aa0d" />
+
+![Log ingestion demo](https://github.com/user-attachments/assets/20b8be2b-5198-4e79-856b-536ef966aa0d)
+
 - **Classifier** – Categorizes incidents (database, runtime, etc.)
 - **Incident Engine** – Orchestrates detection logic
 - **Telegram Alerter** – Sends alerts instantly
--  <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/bec9a890-dd20-48bb-a7a6-d9390f3d6ba6" />
+
+![Telegram alert demo](https://github.com/user-attachments/assets/bec9a890-dd20-48bb-a7a6-d9390f3d6ba6)
+
 - **FastAPI App** – API layer and lifecycle management
 
 ---
@@ -99,11 +103,21 @@ Minimal by design. Boring on purpose.
 
 ---
 
+## Configuration
+
+The service uses environment variables for secrets.
+
+Required variables:
+
+- `TELEGRAM_BOT_TOKEN`
+- `TELEGRAM_CHAT_ID`
+
+These must be set in the deployment environment and are intentionally not committed to the repository.
+
+---
+
 ## Run Locally
 
 ```bash
 pip install -r requirements.txt
 uvicorn main:app --reload
-
-TELEGRAM_BOT_TOKEN=your_token
-TELEGRAM_CHAT_ID=your_chat_id
