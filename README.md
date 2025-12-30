@@ -50,9 +50,11 @@ Together, they prevent silent failure.
 
 - **Log Ingestion** – Accepts structured logs
 - **Incident Detector** – Identifies anomalies and failures
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/20b8be2b-5198-4e79-856b-536ef966aa0d" />
 - **Classifier** – Categorizes incidents (database, runtime, etc.)
 - **Incident Engine** – Orchestrates detection logic
 - **Telegram Alerter** – Sends alerts instantly
+-  <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/bec9a890-dd20-48bb-a7a6-d9390f3d6ba6" />
 - **FastAPI App** – API layer and lifecycle management
 
 ---
